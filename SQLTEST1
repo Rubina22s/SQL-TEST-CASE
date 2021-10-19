@@ -1,0 +1,71 @@
+
+--selecting all data from dataset_1--
+select*FROM dataset_1 
+
+--SELECTING PASSANGER,WEATHER TEMPERATURE --
+SELECT PASSANGER,WEATHER,TEMPERATURE
+FROM dataset_1 
+LIMIT 10;
+
+--SELECTING DISTINCT COLUMN--
+SELECT DISTINCT TIME,COUPON,GENDER,AGE
+FROM dataset_1 
+LIMIT 70;
+
+--OFFSET--
+SELECT PASSANGER, WEATHER,TEMPERATURE,TIME
+FROM dataset_1 
+LIMIT 80
+OFFSET 5;
+
+--ORDER BY--
+SELECT*FROM dataset_1 
+ORDER BY passanger ,GENDER
+LIMIT 20 ;
+
+--PRIOR TO OCCUPATION COLUMN--
+SELECT DATASET_1.OCCUPATION FROM dataset_1 
+LIMIT 50;
+
+--WHERE STATEMENT--
+SELECT*FROM dataset_1 
+WHERE PASSANGER!='ALONE';
+
+
+SELECT PASSANGER,GENDER,AGE, maritalStatus 
+FROM dataset_1 
+WHERE AGE>28
+ORDER BY AGE ;
+
+SELECT PASSANGER,GENDER,AGE, maritalStatus 
+FROM dataset_1
+where age=31;
+
+
+SELECT PASSANGER,GENDER,AGE, maritalStatus 
+FROM dataset_1
+where maritalStatus !='Married parter';
+
+SELECT PASSANGER,GENDER,AGE, maritalStatus 
+FROM dataset_1
+where maritalStatus !='Single'
+
+--table_to_join--
+select* from table_to_join
+
+select* from table_to_join
+order by time asc;
+
+-- notin operator--
+select* from dataset_1 
+where bar not in('never','less1');
+
+--SQRT AND AVERAGE--
+SELECT AVG(AGE),SQRT(AGE)
+FROM dataset_1;
+
+--SUBQUERY--
+SELECT PASSANGER,GENDER,AGE,maritalStatus ,INCOME 
+FROM dataset_1
+ORDER BY INCOME ASC;
+
